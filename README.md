@@ -132,18 +132,7 @@ The plugin is built on the **Anthropic Agent SDK** convention — six markdown a
 
 ## Installation
 
-This is a Claude-compatible plugin in the Anthropic plugin format. It runs inside any Claude-compatible runtime — the **Claude Code CLI** or the **Claude Desktop application** — and can also run inside a custom Anthropic-API-based runtime that respects the `SKILL.md` frontmatter convention.
-
-### Option A — Claude Code (terminal CLI)
-
-```bash
-mkdir -p ~/.claude/plugins
-cd ~/.claude/plugins
-git clone https://github.com/Wolfgangrush/indian-family-drafting-litigation.git indian-family-drafting
-claude plugin list
-```
-
-### Option B — Claude Desktop application
+This is a Claude-compatible plugin in the Anthropic plugin format, designed to run inside the **Claude Desktop application** (available at <https://claude.ai/download>). The plugin folder location depends on your OS:
 
 | OS | Plugin folder path |
 |---|---|
@@ -151,7 +140,25 @@ claude plugin list
 | **Windows** | `%APPDATA%\Claude\plugins\` (typically `C:\Users\<you>\AppData\Roaming\Claude\plugins\`) |
 | **Linux** | `~/.config/Claude/plugins/` |
 
-Clone the plugin into that folder, then restart the Claude Desktop application. The plugin is auto-discovered on the next session start.
+Clone the plugin into that folder:
+
+```bash
+# macOS / Linux
+mkdir -p ~/Library/Application\ Support/Claude/plugins   # adjust per OS table
+cd ~/Library/Application\ Support/Claude/plugins
+git clone https://github.com/Wolfgangrush/indian-family-drafting-litigation.git indian-family-drafting
+
+# Windows (PowerShell)
+mkdir -Force $env:APPDATA\Claude\plugins
+cd $env:APPDATA\Claude\plugins
+git clone https://github.com/Wolfgangrush/indian-family-drafting-litigation.git indian-family-drafting
+```
+
+Restart the Claude Desktop application. The plugin is auto-discovered on the next session start.
+
+### Anthropic Plugin Marketplace (when available)
+
+When the plugin lands on the Anthropic Plugin Marketplace, you will be able to install it from inside the application's plugin browser without `git`. Until then, the manual clone steps above are canonical.
 
 ### Verifying the install
 
@@ -203,12 +210,9 @@ case_type: "divorce"
 sub_ground: "cruelty"
 ```
 
-### Step 3 — launch Claude inside the case folder
+### Step 3 — open the case folder in Claude
 
-```bash
-cd ~/Desktop/cases/hma-divorce-CASE/
-claude
-```
+In the Claude Desktop application, point Claude at the case folder using the application's file-browser feature.
 
 ### Step 4 — invoke the skill
 
@@ -326,12 +330,12 @@ This plugin opens that door. It is most-deeply-validated at the Family Court Nag
 
 ## Roadmap
 
-- [x] **v0.1.0-alpha** — six-agent pipeline + universal family pleading base + 8 case-type skill scaffolds (divorce / JS / RCR / nullity / maintenance / custody / DV / adoption) + family-law privacy firewall + personal-law applicability discipline + Section 9 FCA reconciliation discipline
-- [ ] **v0.1.0** — full divorce / maintenance / DV / custody case-type coverage to chamber-grade across HMA + SMA + DV Act + Section 125 BNSS
-- [ ] **v0.2.0** — IDA + Parsi + Muslim Personal Law deepening + Family-Court Rules calibration across Maharashtra + Karnataka + Tamil Nadu
-- [ ] **v0.3.0** — adoption (HAMA + JJ Act) full coverage + senior-citizen maintenance under MWPSC Act 2007
-- [ ] **v0.4.0** — international parental child-removal scenarios (*Yashita Sahu* + *Surya Vadanan* parens-patriae framework) + habeas corpus cross-reference into HC plugin
+- [x] **v0.1.0-alpha (current)** — six-agent pipeline + universal family pleading base + 8 case-type skill scaffolds (divorce / JS / RCR / nullity / maintenance / custody / DV / adoption) + family-law privacy firewall + personal-law applicability discipline + Section 9 FCA reconciliation discipline
+- [ ] **v0.1.x** — bug fixes, language-register polish, citation-discipline refinements, family-config refinements driven by user feedback
+- [ ] **v0.x onward** — case-type coverage deepening across personal-law regimes (HMA / SMA / IDA / Parsi / Muslim Personal Law), State-specific Family-Court Rules calibration, adoption (HAMA + JJ Act + Adoption Regulations 2022) expansion, international parental child-removal scenarios, and senior-citizen maintenance under MWPSC Act 2007 — as the community contributes
 - [ ] **v1.0.0** — Stable release with community-validated coverage across all personal-law regimes and all State Family-Court Rules
+
+Per-personal-law and per-State deep validation will arrive in the order advocates contribute. The plugin's family-config architecture means any advocate with regular family-law practice in a given State / personal-law regime can deepen calibration by opening an issue or pull request — no central roadmap is needed to enable that.
 
 ---
 
