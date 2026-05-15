@@ -14,7 +14,7 @@
 2. [Personal-law coverage](#personal-law-coverage)
 3. [Case-type skills (full inventory with statutory authority)](#case-type-skills-full-inventory)
 4. [The 6-agent drafting pipeline (what each agent does)](#the-6-agent-drafting-pipeline)
-5. [Installation](#installation) — Claude Code CLI **and** Claude Desktop application
+5. [Installation](#installation) — Claude Desktop application
 6. [Your first family-law pleading — step-by-step walkthrough](#your-first-family-law-pleading)
 7. [The `family-config.md` file — how personal-law and forum customisation works](#the-family-configmd-file)
 8. [Privacy firewall — extra discipline for family-law content](#privacy-firewall--extra-discipline-for-family-law-content)
@@ -33,7 +33,7 @@
 
 ## What this plugin does
 
-This plugin lets an Indian advocate, sitting inside any Claude-compatible AI runtime (Claude Code CLI or the Claude Desktop application), point to a case folder on disk and obtain a complete family-law pleading in `.docx` form — Cause Title, Marriage Particulars, Domestic Chronology, Grievance Narrative, Grounds, Prayer, Reconciliation / ADR averment, Verification, Supporting Affidavit, List of Documents, and the accompanying applications (interim maintenance, interim custody, ex parte interim DV-Act orders, mediation reference, etc.) — formatted in the **personal-law-appropriate idiom** sourced from a `family-config.md` file the user places in the case folder.
+This plugin lets an Indian advocate, sitting inside the Claude Desktop application, point to a case folder on disk and obtain a complete family-law pleading in `.docx` form — Cause Title, Marriage Particulars, Domestic Chronology, Grievance Narrative, Grounds, Prayer, Reconciliation / ADR averment, Verification, Supporting Affidavit, List of Documents, and the accompanying applications (interim maintenance, interim custody, ex parte interim DV-Act orders, mediation reference, etc.) — formatted in the **personal-law-appropriate idiom** sourced from a `family-config.md` file the user places in the case folder.
 
 The pipeline is six agents running in sequence:
 
@@ -352,7 +352,7 @@ Advocates with regular family-law practice in any State are invited to contribut
 
 Open a GitHub issue with your State + the contribution. Pull requests welcome.
 
-This plugin is open source under MIT. No proprietary gating. No login. No telemetry. No tracking of who uses the plugin or what cases they file.
+This plugin is open source under MIT.
 
 ---
 
