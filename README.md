@@ -340,7 +340,7 @@ Family-law practice in India sits at the intersection of multiple personal-law r
 
 Family-law is also the practice area where **client confidentiality is most acute** — minor children, intimate-partner conduct, mental-health disclosures, domestic-violence allegations, religion-based grounds. The plugin's privacy firewall is structural, not optional: real names never leave the user's machine, and the underlying AI runtime never sees them.
 
-This plugin opens that door. It is most-deeply-validated at the Family Court Nagpur (the author's primary practice court) for Hindu Marriage Act matters; other personal-law regimes and States are supported via `family-config.md`, with deepening per-State and per-personal-law validation arriving through community contribution.
+This plugin opens that door. Personal-law regimes and States are supported via `family-config.md`.
 
 ---
 
