@@ -32,3 +32,19 @@ Read the polished `draft-v2` as if it had been served on opposing counsel, and w
   - **DV-Act elements check** — for DV-Act applications, whether the "domestic relationship" and "shared household" elements (Sections 2(f) and 2(s) of the DV Act 2005) are clearly pleaded
   - **Missing limbs of argument** — Grounds invoked but not fully developed
 - `<case-folder>/final-draft.docx` — a copy of `draft-v2.docx` with any final hardening applied by the advocate after reading the opposing notes
+
+
+---
+
+## v0.2.3 EXPLICIT OUTPUT-PAIRING (load-bearing — Overseer MUST run after every `.md` write)
+
+After writing **opposing-notes + final-draft** to the case folder, the Overseer MUST immediately invoke the shipped output-pairing helper on each `.md` artifact to produce a paired `.docx`:
+
+```bash
+bash "${CLAUDE_PLUGIN_ROOT}/skills/_family_pleading_base/pair_md_to_docx.sh" <case-folder>/opposing-notes.md
+bash "${CLAUDE_PLUGIN_ROOT}/skills/_family_pleading_base/pair_md_to_docx.sh" <case-folder>/final-draft.md
+```
+
+The helper performs the two-step pandoc + `fix_docx_tables.py` pipeline using the shipped `reference.docx` at `${CLAUDE_PLUGIN_ROOT}/skills/_family_pleading_base/reference.docx` and writes the paired `.docx` alongside the `.md`. The advocate then has both formats — `.md` for diffing / version control / downstream agent input, `.docx` for opening in Word.
+
+**Hard rule:** the Overseer does NOT signal the next stage of the pipeline until every `.md` it has written carries a paired `.docx`. The Verifier (or the human reviewer) checks for this pairing and flags any orphan `.md`. (Documented as v0.2.2 OUTPUT-PAIRING DISCIPLINE in `_drafting_common/SKILL.md`; v0.2.3 makes the invocation explicit in this agent's prompt so the rule survives any failure of inherited-rule compliance.)
