@@ -3,7 +3,7 @@
   "version": "0.1.0-alpha",
   "description": "Open-source Claude-compatible plugin for drafting pleadings before Indian Family Courts and the matrimonial-jurisdiction tier of District Courts. Family-config-aware design \u2014 the plugin's structural skeleton is uniform across personal-law regimes (Hindu Marriage Act 1955 / Special Marriage Act 1954 / Indian Divorce Act 1869 / Muslim Personal Law / Parsi Marriage and Divorce Act 1936 / Family Courts Act 1984) and the applicable personal-law + State Family-Court overlay is supplied by the user via a family-config file in the case folder. Drafting workflows for Divorce (HMA / SMA / IDA), Judicial Separation, Restitution of Conjugal Rights, Nullity of Marriage, Maintenance (Section 125 BNSS + Section 24 HMA + Section 18 HAMA), Custody and Guardianship (Guardians and Wards Act 1890 + Hindu Minority and Guardianship Act 1956), Domestic Violence reliefs (DV Act 2005), and Adoption (HAMA / Juvenile Justice Act 2015). Includes the 6-agent drafting pipeline (Reader -> Format -> Drafter -> Verifier -> Refiner -> Overseer) and shared family pleading base.",
   "author": {
-    "name": "Wolfgang Rush",
+    "name": "wolfgang_rush",
     "url": "https://github.com/Wolfgangrush/indian-family-drafting-litigation"
   },
   "license": "MIT",
