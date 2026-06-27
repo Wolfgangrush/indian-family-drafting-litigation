@@ -1,3 +1,17 @@
+<div align="center">
+  <img src="docs/banner.png" width="820"/>
+  <p><strong>Draft pleadings before Indian Family Courts and the matrimonial-jurisdiction tier of District Courts — powered by a six-agent pipeline and eight case-type skills.</strong></p>
+  <p>Visit the live site: <a href="https://wolfgangrush.github.io">wolfgangrush.github.io</a></p>
+</div>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License"/>
+  <img src="https://img.shields.io/badge/Claude-Plugin-purple" alt="Claude Plugin"/>
+  <img src="https://img.shields.io/badge/Indian_Law-Family_Court-orange" alt="Indian Law — Family Court"/>
+  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen" alt="PRs Welcome"/>
+</p>
+
+
 # indian-family-drafting
 
 > **Open-source Claude-compatible plugin for drafting pleadings before Indian Family Courts and the matrimonial-jurisdiction tier of District Courts.**
